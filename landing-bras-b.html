@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poppins – Votre accompagnement personnalisé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: #0F2E5A; --blue: #1F57A4; --orange: #F6A32B; --green: #3DB884; --light: #F0F4FA; --border: #D4DEED; --mid: #7A96B5; --white: #FFFFFF; --yellow: #FFD994; --yellow-dark: #5F3901; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', system-ui, sans-serif; color: var(--navy); background: var(--light); }
+    header { background: var(--white); border-bottom: 1px solid var(--border); height: 64px; display: flex; align-items: center; padding: 0 28px; }
+    .logo { font-size: 1.375rem; font-weight: 800; color: var(--navy); letter-spacing: -.03em; }
+    .logo em { font-style: normal; color: var(--orange); }
+    .page-intro { background: var(--white); border-bottom: 1px solid var(--border); padding: 40px 28px 36px; text-align: center; }
+    .page-intro h1 { font-size: clamp(1.375rem, 2.5vw, 1.875rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 10px; }
+    .page-intro p { font-size: 0.9375rem; color: var(--mid); line-height: 1.6; max-width: 560px; margin: 0 auto; }
+    .offer-section { padding: 48px 28px 40px; }
+    .offer-container { max-width: 520px; margin: 0 auto; }
+    .offer-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 24px; padding: 32px 28px; position: relative; box-shadow: 0 16px 48px rgba(15,46,90,.12), 0 4px 16px rgba(15,46,90,.06); }
+    .offer-badge { position: absolute; top: -1px; right: -1px; padding: 8px 20px; font-size: 0.8125rem; font-weight: 700; border-radius: 0 24px 0 16px; }
+    .badge-trial { background: var(--yellow); color: var(--yellow-dark); }
+    .offer-title { font-size: 1.125rem; font-weight: 800; margin-top: 36px; margin-bottom: 20px; }
+    .pricing { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+    .price-main { font-size: 2.25rem; font-weight: 800; color: var(--blue); }
+    .price-unit { font-size: 0.875rem; color: var(--mid); }
+    .price-then { font-size: 0.875rem; color: var(--mid); }
+    .price-then strong { color: var(--blue); }
+    .timeline { background: var(--light); border-radius: 14px; padding: 18px 16px; margin: 20px 0; }
+    .tl-step { display: flex; align-items: flex-start; gap: 12px; }
+    .tl-icon-col { display: flex; flex-direction: column; align-items: center; width: 30px; flex-shrink: 0; }
+    .tl-icon { width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: white; flex-shrink: 0; }
+    .tl-icon svg { width: 14px; height: 14px; }
+    .tl-icon--today { border: 2.5px solid var(--green); color: var(--green); }
+    .tl-icon--mid { border: 2px solid var(--border); color: var(--mid); }
+    .tl-line { width: 2px; min-height: 20px; background: var(--border); flex-grow: 1; margin: 2px 0; }
+    .tl-line--green { background: var(--green); }
+    .tl-content { padding-top: 3px; padding-bottom: 18px; }
+    .tl-label { font-size: 0.8125rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+    .tl-desc { font-size: 0.75rem; color: var(--mid); line-height: 1.45; }
+    .features-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .features-list li { font-size: 0.9375rem; display: flex; align-items: center; gap: 12px; }
+    .check { width: 22px; height: 22px; background: #E0F7EC; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #1A7A4A; font-weight: 700; font-size: 0.875rem; }
+    .commitment-text { font-size: 0.6875rem; color: var(--mid); line-height: 1.55; padding-top: 16px; border-top: 1px solid var(--border); margin-bottom: 22px; }
+    .offer-cta { display: block; width: 100%; padding: 16px; background: var(--navy); color: white; font-size: 1.0625rem; font-weight: 700; border-radius: 100px; border: none; cursor: pointer; text-align: center; font-family: 'Poppins', sans-serif; transition: background .15s, transform .1s; }
+    .offer-cta:hover { background: var(--blue); transform: translateY(-1px); }
+    .offer-footnote { text-align: center; font-size: 0.75rem; color: var(--mid); margin-top: 12px; line-height: 1.5; }
+    .faq { padding: 0 28px 64px; }
+    .faq-container { max-width: 520px; margin: 0 auto; }
+    .faq h2 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; padding-top: 8px; }
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    details.faq-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden; }
+    details[open].faq-item { border-color: var(--blue); }
+    summary.faq-question { padding: 16px 20px; font-size: 0.9rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer; list-style: none; color: var(--navy); user-select: none; }
+    summary.faq-question::-webkit-details-marker { display: none; }
+    details[open] summary.faq-question { color: var(--blue); }
+    .faq-toggle { font-size: 1.25rem; font-weight: 300; color: var(--mid); flex-shrink: 0; margin-left: 12px; transition: transform .2s; }
+    details[open] .faq-toggle { transform: rotate(45deg); }
+    .faq-answer { padding: 0 20px 16px; font-size: 0.875rem; color: var(--mid); line-height: 1.65; }
+  </style>
+</head>
+<body>
+  <header><div class="logo">Popp<em>ins</em></div></header>
+  <div class="page-intro">
+    <h1>Votre accompagnement personnalisé</h1>
+    <p>D'après vos réponses, voici l'accompagnement que nous recommandons pour votre enfant après votre essai gratuit.</p>
+  </div>
+  <section class="offer-section">
+    <div class="offer-container">
+      <div class="offer-card">
+        <span class="offer-badge badge-trial">Essai gratuit 7 jours</span>
+        <p class="offer-title">Abonnement 12 mois</p>
+        <div class="pricing"><span class="price-main">9,90€</span><span class="price-unit">le 1er mois</span></div>
+        <p class="price-then">puis <strong>26€/mois</strong> à partir du 2e mois</p>
+        <div class="timeline">
+          <div class="tl-step"><div class="tl-icon-col"><div class="tl-icon tl-icon--today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="tl-line tl-line--green"></div></div><div class="tl-content"><p class="tl-label">Aujourd'hui</p><p class="tl-desc">Aucun paiement — votre CB sert uniquement à valider votre compte.</p></div></div>
+          <div class="tl-step"><div class="tl-icon-col"><div class="tl-icon tl-icon--mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div class="tl-line"></div></div><div class="tl-content"><p class="tl-label">Dans 5 jours</p><p class="tl-desc">Rappel par email : fin de votre essai dans 2 jours.</p></div></div>
+          <div class="tl-step"><div class="tl-icon-col"><div class="tl-icon tl-icon--mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="tl-line"></div></div><div class="tl-content"><p class="tl-label">Dans 7 jours</p><p class="tl-desc">Début de l'abonnement : <strong>9,90€</strong> pour le 1er mois.</p></div></div>
+          <div class="tl-step"><div class="tl-icon-col"><div class="tl-icon tl-icon--mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div></div><div class="tl-content" style="padding-bottom:0"><p class="tl-label">Dans ~30 jours</p><p class="tl-desc">Rappel avant renouvellement à <strong>26€/mois</strong>.</p></div></div>
+        </div>
+        <ul class="features-list"><li><span class="check">✓</span>Le jeu Poppins sur tablette ou téléphone</li><li><span class="check">✓</span>Suivi de l'avancée en temps réel pour les parents</li><li><span class="check">✓</span>Un suivi téléphonique régulier et personnalisé</li><li><span class="check">✓</span>Une communauté : parents, webinaires, podcasts</li></ul>
+        <p class="commitment-text">Engagement 12 mois, puis renouvellement automatique chaque mois. Résiliable à tout moment au moins 48h avant l'échéance.</p>
+        <button class="offer-cta">Activer l'essai de 7 jours</button>
+        <p class="offer-footnote">Aucun paiement aujourd'hui.<br/>Annulez à tout moment pendant l'essai.</p>
+      </div>
+    </div>
+  </section>
+  <section class="faq">
+    <div class="faq-container">
+      <h2>Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary class="faq-question">Comment fonctionne l'essai gratuit + le prix d'introduction ?<span class="faq-toggle">+</span></summary><p class="faq-answer">Votre CB est enregistrée pour valider votre compte, mais aucun débit pendant 7 jours. Si vous choisissez de continuer, votre 1er mois est à 9,90€ — puis l'abonnement passe à 26€/mois à partir du 2e mois. Vous serez prévenu par email avant chaque changement.</p></details>
+        <details class="faq-item"><summary class="faq-question">À partir de quel âge Poppins est-il adapté ?<span class="faq-toggle">+</span></summary><p class="faq-answer">Poppins est conçu pour les enfants de 6 à 14 ans présentant des difficultés de lecture liées à la dyslexie.</p></details>
+        <details class="faq-item"><summary class="faq-question">Poppins remplace-t-il l'orthophoniste ?<span class="faq-toggle">+</span></summary><p class="faq-answer">Non — Poppins est conçu pour compléter les séances d'orthophonie, pas les remplacer.</p></details>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
