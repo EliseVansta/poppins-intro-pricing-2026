@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockups — Introductory Pricing · Poppins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:   #0F2E5A;
+      --blue:   #1F57A4;
+      --orange: #F6A32B;
+      --green:  #3DB884;
+      --light:  #F0F4FA;
+      --border: #D4DEED;
+      --mid:    #7A96B5;
+      --white:  #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', system-ui, sans-serif; background: #EEF2F9; color: var(--navy); min-height: 100vh; }
+
+    /* ── Header ── */
+    .page-header {
+      background: var(--navy); padding: 32px 28px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .page-header-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .logo { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: -.03em; }
+    .logo em { font-style: normal; color: var(--orange); }
+    .page-meta { display: flex; flex-direction: column; gap: 2px; }
+    .page-title { font-size: 1rem; font-weight: 700; color: white; }
+    .page-subtitle { font-size: 0.8125rem; color: rgba(255,255,255,0.5); }
+
+    .status-badge {
+      background: rgba(61,184,132,0.15); color: var(--green);
+      padding: 6px 14px; border-radius: 100px;
+      font-size: 0.75rem; font-weight: 600;
+      border: 1px solid rgba(61,184,132,0.3);
+    }
+
+    /* ── Main ── */
+    main { max-width: 1140px; margin: 0 auto; padding: 48px 28px 64px; }
+
+    /* ── Section label ── */
+    .section-label {
+      font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--mid); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* ── Cards grid ── */
+    .cards-grid {
+      display: grid; gap: 16px; margin-bottom: 48px;
+    }
+    .cards-grid--1 { grid-template-columns: 1fr; }
+    .cards-grid--3 { grid-template-columns: repeat(3, 1fr); }
+    .cards-grid--2 { grid-template-columns: repeat(2, 1fr); }
+
+    /* ── Card ── */
+    .card {
+      background: white; border-radius: 16px;
+      border: 1.5px solid var(--border);
+      overflow: hidden;
+      text-decoration: none; color: var(--navy);
+      display: flex; flex-direction: column;
+      transition: transform .15s, box-shadow .15s, border-color .15s;
+      box-shadow: 0 2px 8px rgba(15,46,90,.06);
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(15,46,90,.14);
+      border-color: var(--blue);
+    }
+    .card-preview {
+      height: 120px; display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; position: relative; overflow: hidden;
+    }
+    .card-preview--compare { background: linear-gradient(135deg, #E8F0FE 0%, #D4E4FF 100%); }
+    .card-preview--bras-a  { background: linear-gradient(135deg, #E8F0FE 0%, #C8DCFF 100%); }
+    .card-preview--bras-b  { background: linear-gradient(135deg, #E8FAF0 0%, #C0F0D8 100%); }
+    .card-preview--bras-c  { background: linear-gradient(135deg, #FFF4E5 0%, #FFE0B2 100%); }
+    .card-preview--email   { background: linear-gradient(135deg, #F3E8FF 0%, #E0C8FF 100%); }
+    .card-preview--payment { background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); }
+
+    .card-preview-label {
+      position: absolute; bottom: 10px; right: 12px;
+      font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; opacity: 0.5; font-family: 'Poppins', sans-serif;
+    }
+
+    .card-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+
+    .card-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; padding: 3px 10px; border-radius: 100px; width: fit-content;
+    }
+    .tag-a { background: #E8F0FE; color: var(--blue); }
+    .tag-b { background: #E8FAF0; color: #1A7A4A; }
+    .tag-c { background: #FFF4E5; color: #7C4A00; }
+    .tag-compare { background: #EEF2F9; color: var(--navy); }
+    .tag-email { background: #F3E8FF; color: #6B21A8; }
+    .tag-payment { background: #E8F5E9; color: #166534; }
+    .tag-payment-a { background: #E8F0FE; color: var(--blue); }
+    .tag-payment-b { background: #E8FAF0; color: #1A7A4A; }
+    .tag-payment-c { background: #FFF4E5; color: #7C4A00; }
+
+    .card-title { font-size: 0.9375rem; font-weight: 700; line-height: 1.3; }
+    .card-desc { font-size: 0.8125rem; color: var(--mid); line-height: 1.5; flex: 1; }
+
+    .card-footer {
+      padding: 12px 20px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.75rem; color: var(--mid);
+    }
+    .card-arrow { color: var(--blue); font-size: 1rem; transition: transform .15s; }
+    .card:hover .card-arrow { transform: translateX(3px); }
+
+    .tag-email-a { background: #E8F0FE; color: var(--blue); }
+    .tag-email-b { background: #FFF3CD; color: #7A4800; }
+    .tag-email-c { background: #E0F7EC; color: #1A7A4A; }
+
+    /* ── Notes box ── */
+    .notes-box {
+      background: white; border-radius: 16px; border: 1.5px solid var(--border);
+      padding: 24px 28px;
+    }
+    .notes-box h3 { font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--mid); margin-bottom: 14px; }
+    .notes-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .notes-box li { font-size: 0.875rem; line-height: 1.6; padding-left: 16px; position: relative; color: var(--navy); }
+    .notes-box li::before { content: '·'; position: absolute; left: 0; color: var(--orange); font-size: 1.2rem; line-height: 1; top: 2px; }
+
+    @media (max-width: 900px) {
+      .cards-grid--3 { grid-template-columns: 1fr; }
+      .cards-grid--2 { grid-template-columns: 1fr; }
+      .page-header-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      main { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <div class="logo">Popp<em>ins</em></div>
+        <div class="page-meta">
+          <div class="page-title">Mockups — Introductory Pricing</div>
+          <div class="page-subtitle">Cadrage expérience · 2026 · Usage interne uniquement</div>
+        </div>
+      </div>
+      <span class="status-badge">En cours de validation</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── Vue comparative ── -->
+    <p class="section-label">Vue comparative</p>
+    <div class="cards-grid cards-grid--1">
+      <a class="card" href="landing-intro-pricing.html" target="_blank">
+        <div class="card-preview card-preview--compare">
+          📱
+          <span class="card-preview-label">Comparaison</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag tag-compare">Tous les bras</span>
+          <p class="card-title">Comparaison bras A · B · C</p>
+          <p class="card-desc">Vue côte à côte des 3 variations de l'offre (format phone mockup) — variantes 12 mois et 6 mois incluses. Idéal pour les revues internes et les présentations de cadrage.</p>
+        </div>
+        <div class="card-footer">
+          <span>landing-intro-pricing.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- ── Landing pages individuelles ── -->
+    <p class="section-label">Landing pages individuelles (rendu final)</p>
+    <div class="cards-grid cards-grid--3">
+
+      <a class="card" href="landing-bras-a.html" target="_blank">
+        <div class="card-preview card-preview--bras-a">🛡️<span class="card-preview-label">Bras A</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-a">Bras A — Référence</span>
+          <p class="card-title">Essai gratuit 7 jours</p>
+          <p class="card-desc">Offre actuelle avec essai gratuit 7 jours et remise –20% sur l'abonnement 12 mois (20,80€/mois). Groupe contrôle.</p>
+        </div>
+        <div class="card-footer">
+          <span>landing-bras-a.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="landing-bras-b.html" target="_blank">
+        <div class="card-preview card-preview--bras-b">🎯<span class="card-preview-label">Bras B</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-b">Bras B — Trial + Intro</span>
+          <p class="card-title">Essai 7 jours + 1er mois à 9,90€</p>
+          <p class="card-desc">Essai gratuit 7 jours, puis premier mois à prix d'introduction 9,90€, puis 26€/mois. Timeline de parcours affichée.</p>
+        </div>
+        <div class="card-footer">
+          <span>landing-bras-b.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="landing-bras-c.html" target="_blank">
+        <div class="card-preview card-preview--bras-c">🚀<span class="card-preview-label">Bras C</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-c">Bras C — Intro seul</span>
+          <p class="card-title">Démarrer pour 9,90€</p>
+          <p class="card-desc">Pas d'essai gratuit — accès immédiat avec un premier mois à prix découverte 9,90€, puis 26€/mois. Timeline de parcours affichée.</p>
+        </div>
+        <div class="card-footer">
+          <span>landing-bras-c.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ── Vue comparative paiement ── -->
+    <p class="section-label">Paiement — Vue comparative</p>
+    <div class="cards-grid cards-grid--1">
+      <a class="card" href="payment-intro-pricing.html" target="_blank">
+        <div class="card-preview card-preview--payment">
+          💳
+          <span class="card-preview-label">Comparaison</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag tag-compare">Tous les bras</span>
+          <p class="card-title">Comparaison paiement bras A · B · C</p>
+          <p class="card-desc">Vue côte à côte des 3 pages de paiement — récapitulatif de l'offre souscrite, formulaire CB, timeline par bras. Variantes 12 mois et 6 mois incluses.</p>
+        </div>
+        <div class="card-footer">
+          <span>payment-intro-pricing.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- ── Pages de paiement individuelles ── -->
+    <p class="section-label">Paiement — Pages individuelles (rendu final)</p>
+    <div class="cards-grid cards-grid--3">
+
+      <a class="card" href="payment-bras-a.html" target="_blank">
+        <div class="card-preview card-preview--bras-a">🛡️<span class="card-preview-label">Paiement A</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-payment-a">Bras A — Référence</span>
+          <p class="card-title">Paiement — Essai 7j + –20%</p>
+          <p class="card-desc">Essai gratuit 7 jours, abonnement 12 mois à 20,80€/mois. Timeline 3 étapes.</p>
+        </div>
+        <div class="card-footer">
+          <span>payment-bras-a.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="payment-bras-b.html" target="_blank">
+        <div class="card-preview card-preview--bras-b">🎯<span class="card-preview-label">Paiement B</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-payment-b">Bras B — Trial + Intro</span>
+          <p class="card-title">Paiement — Essai 7j + 9,90€</p>
+          <p class="card-desc">Essai gratuit 7 jours, puis 9,90€ le 1er mois, puis 26€/mois. Timeline 4 étapes.</p>
+        </div>
+        <div class="card-footer">
+          <span>payment-bras-b.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="payment-bras-c.html" target="_blank">
+        <div class="card-preview card-preview--bras-c">🚀<span class="card-preview-label">Paiement C</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-payment-c">Bras C — Intro seul</span>
+          <p class="card-title">Paiement — 9,90€ accès immédiat</p>
+          <p class="card-desc">Pas d'essai, débit immédiat de 9,90€, puis 26€/mois. Timeline 3 étapes.</p>
+        </div>
+        <div class="card-footer">
+          <span>payment-bras-c.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ── Email confirmation — Vue comparative ── -->
+    <p class="section-label">Email confirmation — Vue comparative</p>
+    <div class="cards-grid cards-grid--1">
+      <a class="card" href="email-confirmation-intro.html" target="_blank">
+        <div class="card-preview card-preview--email">
+          ✉️
+          <span class="card-preview-label">Comparaison</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag tag-compare">Tous les bras</span>
+          <p class="card-title">Comparaison email confirmation bras B · C</p>
+          <p class="card-desc">Vue côte à côte des emails de confirmation — comparaison du wording et des récapitulatifs selon l'offre souscrite (bras B : essai + intro pricing / bras C : accès immédiat).</p>
+        </div>
+        <div class="card-footer">
+          <span>email-confirmation-intro.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- ── Email confirmation — Pages individuelles ── -->
+    <p class="section-label">Email confirmation — Pages individuelles (rendu final)</p>
+    <div class="cards-grid cards-grid--3">
+
+      <a class="card" href="email-confirmation-bras-a.html" target="_blank">
+        <div class="card-preview card-preview--bras-a">✉️<span class="card-preview-label">Confirmation A</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-email-a">Bras A — Référence</span>
+          <p class="card-title">Confirmation — Essai 7j + –20%</p>
+          <p class="card-desc">Badge jaune "Essai activé", récap : essai 7j gratuit + 20,80€/mois après. Design calqué sur le mail actuel Poppins.</p>
+        </div>
+        <div class="card-footer">
+          <span>email-confirmation-bras-a.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="email-confirmation-bras-b.html" target="_blank">
+        <div class="card-preview card-preview--bras-b">✉️<span class="card-preview-label">Confirmation B</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-email-b">Bras B — Trial + Intro</span>
+          <p class="card-title">Confirmation — Essai 7j + 9,90€</p>
+          <p class="card-desc">Badge jaune "Essai activé", récap : essai 7j + 9,90€ M1 + 26€/mois M2+. Rappel du futur changement de tarif.</p>
+        </div>
+        <div class="card-footer">
+          <span>email-confirmation-bras-b.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="card" href="email-confirmation-bras-c.html" target="_blank">
+        <div class="card-preview card-preview--bras-c">✉️<span class="card-preview-label">Confirmation C</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-email-c">Bras C — Intro seul</span>
+          <p class="card-title">Confirmation — 9,90€ accès immédiat</p>
+          <p class="card-desc">Badge vert "Accès actif", récap : 9,90€ M1 jusqu'au 29 mars + 26€/mois à partir du 29 mars. Pas de mention d'essai.</p>
+        </div>
+        <div class="card-footer">
+          <span>email-confirmation-bras-c.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ── Email rappel ── -->
+    <p class="section-label">Email de rappel</p>
+    <div class="cards-grid cards-grid--1">
+      <a class="card" href="email-rappel-m2.html" target="_blank">
+        <div class="card-preview card-preview--email">🔔<span class="card-preview-label">Rappel</span></div>
+        <div class="card-body">
+          <span class="card-tag tag-email">Email</span>
+          <p class="card-title">Email de rappel — changement de tarif</p>
+          <p class="card-desc">Email envoyé ~7 jours avant le 1er renouvellement (bras B : ~J+30 / bras C : ~J+23) — rappel du changement de tarif (9,90€ → 26€/mois). Vue comparative B et C. Timing à confirmer avec growth.</p>
+        </div>
+        <div class="card-footer">
+          <span>email-rappel-m2.html</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- ── Notes de cadrage ── -->
+    <p class="section-label">Points de validation ouverts</p>
+    <div class="notes-box">
+      <h3>Wording & Product</h3>
+      <ul>
+        <li><strong>Badge bras C :</strong> "Prix découverte" vs "Offre de bienvenue" vs "Prix d'introduction" → à trancher avec produit + Alex</li>
+        <li><strong>CTA bras C :</strong> "Démarrer pour 9,90€" vs "Commencer maintenant" → à valider</li>
+        <li><strong>Montant "puis 26€/mois" :</strong> confirmer que c'est 26€ pour les durées 6 mois ET 12 mois</li>
+        <li><strong>Wording prix :</strong> "1er mois" vs "premier mois" — cohérence typographique à valider</li>
+        <li><strong>Mention légale bras C :</strong> "Résiliable à tout moment" retirée du sous-bouton — à confirmer avec équipe légale</li>
+      </ul>
+    </div>
+
+  </main>
+
+</body>
+</html>
