@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup – Email rappel avant M2 – Intro Pricing</title>
+  <style>
+    :root { --blue500: #1F57A4; --blue400: #1E5DB3; --ink500: #0F2E5A; --mid300: #9EB3D0; --mid400: #7a97bc; --light300: #F8F9FC; --light900: #D4DEED; --green: #4DCA95; --warn300: #FFD994; --yellow900: #5F3901; --font: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: #eef2f9; padding: 24px 16px; color: var(--ink500); }
+    .page-title { text-align: center; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #6b7c93; margin-bottom: 6px; }
+    .page-subtitle { text-align: center; font-size: 0.75rem; color: #6b7c93; margin-bottom: 32px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px; max-width: 820px; margin: 0 auto; }
+    .arm-label { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 12px; }
+    .arm-b { background: #e8faf0; color: #1a7a4a; } .arm-c { background: #fff4e5; color: #7c4a00; }
+    .email-frame { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(15,46,90,.12); border: 1px solid var(--light900); max-width: 400px; margin: 0 auto; font-size: 0.875rem; }
+    .email-header { background: var(--blue500); padding: 24px 20px 20px; text-align: center; }
+    .email-logo { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: -.01em; } .email-logo span { color: var(--warn300); }
+    .email-body { padding: 24px 20px; }
+    .email-greeting { font-size: 1rem; font-weight: 700; color: var(--ink500); margin-bottom: 12px; }
+    .email-para { font-size: 0.8125rem; color: #444; line-height: 1.65; margin-bottom: 14px; }
+    .price-box { background: var(--light300); border: 1px solid var(--light900); border-radius: 10px; padding: 16px; margin: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .price-col { text-align: center; flex: 1; } .price-col .label { font-size: 0.6875rem; color: var(--mid300); font-weight: 500; margin-bottom: 4px; } .price-col .amount { font-size: 1.5rem; font-weight: 800; color: var(--blue500); } .price-col .amount-sub { font-size: 0.6875rem; color: var(--mid300); margin-top: 2px; }
+    .price-arrow { font-size: 1.25rem; color: var(--mid300); flex-shrink: 0; }
+    .countdown { background: var(--warn300); color: var(--yellow900); border-radius: 8px; padding: 10px 14px; font-size: 0.8125rem; font-weight: 700; text-align: center; margin: 16px 0; }
+    .countdown .days { font-size: 1.5rem; font-weight: 800; display: block; margin-bottom: 2px; }
+    .cta-wrap { text-align: center; margin: 18px 0 10px; }
+    .cta-btn-primary { display: inline-block; padding: 13px 28px; background: var(--blue500); color: white; font-size: 0.875rem; font-weight: 700; border-radius: 24px; text-decoration: none; margin-bottom: 10px; }
+    .benefits { background: #e8f4fd; border-radius: 8px; padding: 14px; margin: 16px 0; }
+    .benefits-title { font-size: 0.8125rem; font-weight: 700; color: var(--blue500); margin-bottom: 8px; }
+    .benefits ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .benefits li { font-size: 0.75rem; color: var(--ink500); display: flex; align-items: flex-start; gap: 6px; line-height: 1.45; }
+    .benefits li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .reassurance { font-size: 0.6875rem; color: var(--mid300); line-height: 1.6; padding: 10px 0; border-top: 1px solid var(--light900); text-align: center; }
+    .email-footer { background: var(--light300); padding: 14px 20px; text-align: center; border-top: 1px solid var(--light900); }
+    .email-footer p { font-size: 0.6875rem; color: var(--mid300); line-height: 1.6; } .email-footer a { color: var(--blue500); }
+    .notes-block { max-width: 820px; margin: 40px auto 0; padding: 20px; background: white; border-radius: 12px; border: 1px solid var(--light900); }
+    .notes-title { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #6b7c93; margin-bottom: 10px; }
+    .notes-block ul { font-size: 0.8125rem; color: var(--ink500); line-height: 1.7; padding-left: 18px; }
+  </style>
+</head>
+<body>
+  <p class="page-title">Mockup · Nouvel email — Rappel avant renouvellement M2 · Intro Pricing</p>
+  <p class="page-subtitle">Email envoyé ~7 jours avant le 1er renouvellement à 26€/mois (bras B et C) — timing à confirmer avec growth</p>
+  <div class="grid">
+    <!-- BRAS B -->
+    <div>
+      <span class="arm-label arm-b">Bras B — Essai + Intro (envoi ~J+30)</span>
+      <div style="background:#e8faf0;border:1px solid #b2dfcc;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:0.75rem;color:#1a7a4a;">📅 <strong>Timing d'envoi :</strong> ~J+30 (7 jours avant le renouvellement M2 à J+37 = 7j d'essai + 30j M1)</div>
+      <div class="email-frame">
+        <div class="email-header"><div class="email-logo">Popp<span>ins</span></div></div>
+        <div class="email-body">
+          <p class="email-greeting">Bonjour [Prénom],</p>
+          <div class="countdown"><span class="days">Dans 7 jours</span>votre abonnement se renouvelle à son tarif standard</div>
+          <p class="email-para">Vous avez profité de votre 1er mois au tarif d'introduction de <strong>9,90€</strong>. Dans 7 jours, votre abonnement sera automatiquement renouvelé au tarif standard de <strong>26€/mois</strong>.</p>
+          <div class="price-box">
+            <div class="price-col"><p class="label">1er mois (intro)</p><p class="amount">9,90€</p><p class="amount-sub">/mois</p></div>
+            <div class="price-arrow">→</div>
+            <div class="price-col"><p class="label">À partir du 2e mois</p><p class="amount">26€</p><p class="amount-sub">/mois</p></div>
+          </div>
+          <div class="benefits">
+            <p class="benefits-title">Ce que vous continuez à avoir avec Poppins</p>
+            <ul>
+              <li>Le jeu Poppins sur tablette ou téléphone</li>
+              <li>Suivi de l'avancée en temps réel pour les parents</li>
+              <li>Un suivi téléphonique régulier et personnalisé</li>
+              <li>Une communauté : parents, webinaires, podcasts</li>
+            </ul>
+          </div>
+          <p class="email-para" style="font-size:0.75rem;color:var(--mid400);background:#F8F9FC;border:1px solid #D4DEED;border-radius:8px;padding:10px 12px;">📋 <strong>Rappel de votre engagement :</strong> Vous avez souscrit un abonnement 12 mois. Ce renouvellement est uniquement un changement de tarif — votre engagement reste inchangé jusqu'à son terme.</p>
+          <div class="cta-wrap"><a href="#" class="cta-btn-primary">Continuer avec Poppins</a></div>
+          <p class="reassurance">Aucune action n'est requise pour continuer, le renouvellement est automatique.</p>
+        </div>
+        <div class="email-footer"><p>Vous avez reçu cet email car vous êtes abonné(e) à Poppins.<br/><a href="#">Gérer mon abonnement</a> · <a href="#">Se désabonner</a></p></div>
+      </div>
+    </div>
+    <!-- BRAS C -->
+    <div>
+      <span class="arm-label arm-c">Bras C — Intro seul (envoi ~J+23)</span>
+      <div style="background:#fff4e5;border:1px solid #f0c070;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:0.75rem;color:#7c4a00;">📅 <strong>Timing d'envoi :</strong> ~J+23 (7 jours avant le renouvellement M2 à J+30 = pas d'essai, M1 = 30j)</div>
+      <div class="email-frame">
+        <div class="email-header"><div class="email-logo">Popp<span>ins</span></div></div>
+        <div class="email-body">
+          <p class="email-greeting">Bonjour [Prénom],</p>
+          <div class="countdown"><span class="days">Dans 7 jours</span>votre abonnement se renouvelle à son tarif standard</div>
+          <p class="email-para">Vous avez profité de votre 1er mois au tarif d'introduction de <strong>9,90€</strong>. Dans 7 jours, votre abonnement sera automatiquement renouvelé au tarif standard de <strong>26€/mois</strong>.</p>
+          <div class="price-box">
+            <div class="price-col"><p class="label">1er mois (intro)</p><p class="amount">9,90€</p><p class="amount-sub">/mois</p></div>
+            <div class="price-arrow">→</div>
+            <div class="price-col"><p class="label">À partir du 2e mois</p><p class="amount">26€</p><p class="amount-sub">/mois</p></div>
+          </div>
+          <div class="benefits">
+            <p class="benefits-title">Ce que vous continuez à avoir avec Poppins</p>
+            <ul>
+              <li>Le jeu Poppins sur tablette ou téléphone</li>
+              <li>Suivi de l'avancée en temps réel pour les parents</li>
+              <li>Un suivi téléphonique régulier et personnalisé</li>
+              <li>Une communauté : parents, webinaires, podcasts</li>
+            </ul>
+          </div>
+          <p class="email-para" style="font-size:0.75rem;color:var(--mid400);background:#F8F9FC;border:1px solid #D4DEED;border-radius:8px;padding:10px 12px;">📋 <strong>Rappel de votre engagement :</strong> Vous avez souscrit un abonnement 12 mois. Ce renouvellement est uniquement un changement de tarif — votre engagement reste inchangé jusqu'à son terme.</p>
+          <div class="cta-wrap"><a href="#" class="cta-btn-primary">Continuer avec Poppins</a></div>
+          <p class="reassurance">Aucune action n'est requise pour continuer, le renouvellement est automatique.</p>
+        </div>
+        <div class="email-footer"><p>Vous avez reçu cet email car vous êtes abonné(e) à Poppins.<br/><a href="#">Gérer mon abonnement</a> · <a href="#">Se désabonner</a></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="notes-block">
+    <p class="notes-title">Points à cadrer (Hugo / Customer.io + Growth + Produit)</p>
+    <ul>
+      <li><strong>Objet de l'email :</strong> À définir — ex. "Dans 2 jours, votre abonnement Poppins passe à 26€/mois" → clair et honnête, pas de surprise. À valider avec growth.</li>
+      <li><strong>Timing d'envoi :</strong> Bras B : J+30 (7j avant J+37) — Bras C : J+23 (7j avant J+30). À confirmer avec growth.</li>
+      <li><strong>Déclencheur Customer.io :</strong> Événement Stripe customer.subscription.updated ou déclencheur en avance configuré côté Customer.io. À confirmer avec Hugo.</li>
+      <li><strong>Lien de résiliation retiré :</strong> Le lien "Résilier mon abonnement" a été supprimé — l'email informe d'un changement de tarif, pas d'une fin d'engagement. La résiliation reste possible via l'espace abonné (lien "Gérer mon abonnement" en footer).</li>
+      <li><strong>Template unique ou deux templates :</strong> Le corps de l'email est identique entre B et C (seul le timing change) → un seul template avec date dynamique est suffisant.</li>
+      <li><strong>Wording "tarif standard" :</strong> "Tarif standard" vs "tarif mensuel" vs "tarif habituel" → à aligner avec le wording landing et page de paiement.</li>
+      <li><strong>Métriques à suivre :</strong> Taux d'ouverture, taux de clic "Continuer", taux de résiliation dans les 48h suivant l'envoi → distinguer le churn "normal" M1→M2 de l'insatisfaction.</li>
+    </ul>
+  </div>
+</body>
+</html>

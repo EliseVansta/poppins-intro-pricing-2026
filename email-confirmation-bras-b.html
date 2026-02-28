@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email confirmation — Poppins · Bras B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: #0F2E5A; --blue: #1F57A4; --green: #4DCA95; --green-bg: #E0F7EC; --green-dark: #1A7A4A; --light: #F8F9FC; --border: #D4DEED; --mid: #7A96B5; --orange: #F6A32B; --yellow: #FFD994; --yellow-dark: #5F3901; --white: #FFFFFF; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif; background: #EEF2F9; padding: 24px 16px 64px; color: var(--navy); }
+    .page-label { text-align: center; font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--mid); margin-bottom: 4px; }
+    .page-sublabel { text-align: center; font-size: 0.75rem; color: var(--mid); margin-bottom: 28px; }
+    .arm-tag { display: block; text-align: center; margin: 0 auto 16px; width: fit-content; padding: 4px 14px; border-radius: 20px; font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; background: #FFF3CD; color: #7A4800; }
+    .email-wrap { max-width: 520px; margin: 0 auto; }
+    .email-frame { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 32px rgba(15,46,90,.14); border: 1px solid var(--border); font-size: 0.875rem; }
+    .email-header { background: var(--blue); padding: 28px 24px 22px; text-align: center; }
+    .email-logo { font-size: 1.75rem; font-weight: 800; color: white; letter-spacing: -.02em; } .email-logo span { color: var(--yellow); }
+    .email-header-tagline { font-size: 0.875rem; color: rgba(255,255,255,.8); margin-top: 6px; font-weight: 500; }
+    .email-body { padding: 24px 24px 0; }
+    .status-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--yellow); color: var(--yellow-dark); border-radius: 8px; padding: 10px 16px; margin-bottom: 20px; font-size: 0.8125rem; font-weight: 700; }
+    .email-greeting { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .email-para { font-size: 0.8125rem; color: #444; line-height: 1.7; margin-bottom: 16px; }
+    .section-label { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--mid); margin-bottom: 10px; }
+    .recap-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--border); }
+    .recap-table tr:nth-child(odd) td { background: var(--light); } .recap-table tr:nth-child(even) td { background: white; }
+    .recap-table td { padding: 9px 12px; font-size: 0.75rem; vertical-align: top; line-height: 1.5; }
+    .recap-table td:first-child { color: var(--mid); font-weight: 500; width: 48%; } .recap-table td:last-child { color: var(--navy); font-weight: 600; }
+    .adventure { background: var(--navy); border-radius: 10px; padding: 20px; margin-bottom: 20px; text-align: center; }
+    .adventure-title { font-size: 1rem; font-weight: 700; color: white; margin-bottom: 8px; }
+    .adventure-text { font-size: 0.75rem; color: rgba(255,255,255,.75); line-height: 1.6; margin-bottom: 16px; }
+    .adventure-cta { display: inline-block; padding: 12px 28px; background: var(--blue); color: white; font-size: 0.875rem; font-weight: 700; border-radius: 24px; text-decoration: none; font-family: inherit; }
+    .tips-section { background: var(--light); border-radius: 10px; padding: 18px; margin-bottom: 20px; }
+    .tips-title { font-size: 0.875rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .tips-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .tips-list li { font-size: 0.75rem; color: #444; line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; }
+    .tip-num { width: 20px; height: 20px; border-radius: 50%; background: var(--blue); color: white; font-size: 0.6875rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .community { background: linear-gradient(135deg, #1A4080 0%, #0F2E5A 100%); border-radius: 10px; padding: 18px; margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+    .community-img { width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0; background: linear-gradient(135deg, #2D5FAA 0%, #4DCA95 100%); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    .community-text { flex: 1; } .community-title { font-size: 0.8125rem; font-weight: 700; color: white; margin-bottom: 4px; } .community-desc { font-size: 0.6875rem; color: rgba(255,255,255,.7); line-height: 1.5; margin-bottom: 10px; }
+    .community-cta { display: inline-block; padding: 7px 18px; background: var(--orange); color: white; font-size: 0.75rem; font-weight: 700; border-radius: 20px; text-decoration: none; }
+    .faq-section { text-align: center; padding: 16px 0 20px; border-top: 1px solid var(--border); }
+    .faq-text { font-size: 0.8125rem; color: var(--mid); margin-bottom: 10px; }
+    .faq-btn { display: inline-block; padding: 10px 24px; border: 1.5px solid var(--border); border-radius: 24px; color: var(--blue); font-size: 0.8125rem; font-weight: 600; text-decoration: none; background: white; }
+    .email-footer { background: var(--light); padding: 16px 24px; border-top: 1px solid var(--border); }
+    .social-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+    .social-icon { width: 30px; height: 30px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: 700; text-decoration: none; }
+    .footer-text { font-size: 0.6875rem; color: var(--mid); line-height: 1.6; text-align: center; } .footer-text a { color: var(--blue); }
+  </style>
+</head>
+<body>
+  <p class="page-label">Mockup · Email confirmation · Intro Pricing</p>
+  <p class="page-sublabel">Envoyé immédiatement après souscription</p>
+  <div class="email-wrap">
+    <span class="arm-tag">Bras B — Essai 7j + prix découverte (9,90€ → 26€)</span>
+    <div class="email-frame">
+      <div class="email-header"><div class="email-logo">Popp<span>ins</span></div><p class="email-header-tagline">Bienvenue chez Poppins !</p></div>
+      <div class="email-body">
+        <div class="status-badge"><span style="font-size:1rem">🎉</span>Votre essai est activé</div>
+        <p class="email-greeting">Bonjour [Prénom],</p>
+        <p class="email-para">Nous sommes ravis de vous accueillir chez Poppins, l'application médicale qui améliore la lecture des enfants dyslexiques.<br/><br/>Vous venez de faire le premier pas pour aider votre enfant dans ses difficultés d'apprentissage.</p>
+        <p class="section-label">Récapitulatif de votre abonnement</p>
+        <table class="recap-table"><tbody>
+          <tr><td>Abonnement</td><td>Accompagnement 12 mois</td></tr>
+          <tr><td>Date de souscription</td><td>27 février 2026</td></tr>
+          <tr><td>Offre d'essai</td><td>Gratuit 7 jours (jusqu'au 6 mars 2026)</td></tr>
+          <tr><td>Tarif 1er mois</td><td>9,90€ (à partir du 6 mars 2026)</td></tr>
+          <tr><td>Tarif à partir du 2e mois</td><td>26€/mois (à partir du 5 avril 2026)</td></tr>
+          <tr><td>Engagement</td><td>12 mois minimum, puis renouvellement mensuel automatique. Résiliable au moins 48h avant l'échéance.</td></tr>
+        </tbody></table>
+        <div class="adventure">
+          <p class="adventure-title">C'est parti pour l'aventure ! 🚀</p>
+          <p class="adventure-text">Votre essai gratuit de 7 jours est actif. Lancez votre première session et découvrez comment Poppins accompagne votre enfant dans ses progrès.<br/><br/>Vous recevrez un rappel 7 jours avant le passage au tarif de 26€/mois.</p>
+          <a href="#" class="adventure-cta">Commencer une session</a>
+        </div>
+        <div class="tips-section">
+          <p class="tips-title">3 conseils de notre orthophoniste pour commencer</p>
+          <ul class="tips-list">
+            <li><span class="tip-num">1</span><span>Visez 3 à 5 sessions par semaine — la régularité garantit des progrès constants.</span></li>
+            <li><span class="tip-num">2</span><span>Accompagnez les premières sessions. Restez près de votre enfant pour l'aider à comprendre les consignes.</span></li>
+            <li><span class="tip-num">3</span><span>Choisissez un moment calme. L'apprentissage s'épanouit dans la sérénité.</span></li>
+          </ul>
+        </div>
+        <div class="community"><div class="community-img">🎓</div><div class="community-text"><p class="community-title">L'accompagnement Poppins commence maintenant</p><p class="community-desc">Rejoignez notre espace en-line où nous expliquons tout sur le programme et échangeons entre parents. Convivial et bienveillant !</p><a href="#" class="community-cta">Rejoindre le groupe</a></div></div>
+        <div class="faq-section"><p class="faq-text">Vous avez des questions ?</p><a href="#" class="faq-btn">Accéder à la FAQ</a></div>
+      </div>
+      <div class="email-footer">
+        <div class="social-row"><a class="social-icon" href="#">f</a><a class="social-icon" href="#">in</a><a class="social-icon" href="#">▶</a><a class="social-icon" href="#">📷</a></div>
+        <p class="footer-text">Pour toute question, notre équipe est là pour vous aider.<br/>N'hésitez pas à consulter notre <a href="#">centre d'aide</a>.<br/><br/><a href="#">Se désabonner</a> · <a href="#">Politique de confidentialité</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
