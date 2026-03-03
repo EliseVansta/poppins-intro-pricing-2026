@@ -62,7 +62,7 @@
     .price-main { font-size: 2.25rem; font-weight: 800; color: var(--blue); }
     .price-unit { font-size: 0.875rem; color: var(--mid); }
     .price-then { font-size: 0.875rem; color: var(--mid); margin-bottom: 22px; }
-    .price-then strong { color: var(--blue); }
+    .price-then s { color: var(--mid); text-decoration: line-through; }
     .discount-pill {
       display: inline-flex; align-items: center; align-self: center;
       background: #DCFCE7; color: #16A34A;
@@ -131,7 +131,7 @@
           <span class="price-unit">/mois</span>
           <span class="discount-pill">–20%</span>
         </div>
-        <p class="price-then">après l'essai gratuit · au lieu de 26€/mois</p>
+        <p class="price-then">au lieu de <s>26€/mois</s></p>
         <ul class="features-list">
           <li><span class="check">✓</span>Aucun paiement avant la fin des 7 jours</li>
           <li><span class="check">✓</span>Annulation facile en 2 clics durant l'essai</li>
