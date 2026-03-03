@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mockup – Landing post-éligibilité – Intro Pricing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --blue500:   #1F57A4;
@@ -17,7 +20,7 @@
       --warn300:   #FFD994;
       --yellow900: #5F3901;
       --white:     #FFFFFF;
-      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font: 'Poppins', system-ui, sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -106,14 +109,15 @@
       line-height: 1.35;
     }
 
+    /* ── Offer card : design aligné sur les landing pages ── */
     .offer-card {
       background: var(--white);
       border: 1.5px solid var(--mid100);
-      border-radius: 12px;
+      border-radius: 24px;
       padding: 20px 16px;
       margin: 12px 0;
       position: relative;
-      box-shadow: 0 2px 8px rgba(15,46,90,.06);
+      box-shadow: 0 8px 24px rgba(15,46,90,.10), 0 2px 8px rgba(15,46,90,.06);
     }
 
     .offer-name {
@@ -124,17 +128,19 @@
       margin-bottom: 12px;
     }
 
+    /* ── Badge : même style que les landing pages ── */
     .badge {
       position: absolute;
       top: -1px;
       right: -1px;
-      padding: 4px 14px;
+      padding: 6px 16px;
       font-size: 0.75rem;
       font-weight: 700;
-      border-radius: 0 12px 0 12px;
+      border-radius: 0 24px 0 16px;
     }
-    .badge-trial { background: var(--warn300); color: var(--yellow900); }
-    .badge-intro { background: #e0f7ec; color: #1a7a4a; }
+    .badge-trial   { background: var(--warn300); color: var(--yellow900); }
+    .badge-intro   { background: #e0f7ec; color: #1a7a4a; }
+    .badge-discount { background: var(--blue500); color: white; }
 
     .pricing {
       display: flex;
@@ -169,6 +175,7 @@
       border-top: 1px solid var(--light900);
     }
 
+    /* ── Reassurance : icônes check rondes vertes (style landing) ── */
     .reassurance {
       list-style: none;
       margin: 14px 0;
@@ -185,11 +192,22 @@
     }
     .reassurance li::before {
       content: '✓';
-      color: var(--green);
-      font-weight: 700;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background: #E0F7EC;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
+      color: #1A7A4A;
+      font-weight: 700;
+      font-size: 0.6875rem;
+      line-height: 1;
     }
 
+    /* ── CTA : bouton pill (style landing) ── */
     .cta-btn {
       display: block;
       width: 100%;
@@ -198,11 +216,12 @@
       color: var(--white);
       font-size: 0.9375rem;
       font-weight: 700;
-      border-radius: 24px;
+      border-radius: 100px;
       border: none;
       cursor: pointer;
       text-align: center;
       margin-top: 16px;
+      font-family: var(--font);
     }
     .cta-btn:hover { background: var(--blue400); }
 
@@ -250,7 +269,7 @@
 <body>
 
   <p class="page-title">Mockup · Landing post-éligibilité · Intro Pricing</p>
-  <p class="page-subtitle">Comparaison bras A (référence), bras B (Trial + Intro), bras C (Intro seul) — offre 12 mois illustrée</p>
+  <p class="page-subtitle">Comparaison bras A (référence), bras B (Trial + –50%), bras C (–50% sans essai) — design aligné sur les landing pages</p>
 
   <div class="grid">
 
@@ -289,7 +308,7 @@
 
     <!-- ════════════════════════ BRAS B 12 mois ════════════════════════ -->
     <div>
-      <span class="arm-label arm-b">Bras B — Trial + Prix d'introduction</span><br/>
+      <span class="arm-label arm-b">Bras B — Trial + –50% sur 12 mois</span><br/>
       <span class="variant-note">🏷️ 2 variantes du badge à valider · affiché ici : V1 "Essai gratuit 7 jours"</span>
       <div class="phone">
         <div class="app-header">
@@ -307,10 +326,10 @@
             </div>
             <p class="offer-name" style="margin-top:6px;">Abonnement complet 12 mois</p>
             <div class="pricing">
-              <span class="price-main">9,90€</span>
-              <span class="price-unit"> le 1er mois</span>
+              <span class="price-main">13€</span>
+              <span class="price-unit">/mois</span>
             </div>
-            <p class="price-then">puis <strong style="font-size:0.9375rem;font-weight:800;">26€/mois</strong> à partir du 2<sup>e</sup> mois</p>
+            <p class="price-then">au lieu de <strong style="font-size:0.9375rem;font-weight:800;text-decoration:line-through;">26€/mois</strong> &nbsp;·&nbsp; <strong>–50%</strong></p>
             <ul class="reassurance">
               <li>Aucun paiement avant la fin des 7 jours</li>
               <li>Annulation facile en 2 clics durant l'essai</li>
@@ -326,7 +345,7 @@
 
     <!-- ════════════════════════ BRAS C 12 mois ════════════════════════ -->
     <div>
-      <span class="arm-label arm-c">Bras C — Prix d'introduction (sans essai)</span>
+      <span class="arm-label arm-c">Bras C — –50% sans essai</span>
       <div class="phone">
         <div class="app-header">
           <div class="app-logo">Popp<span>ins</span></div>
@@ -343,10 +362,10 @@
             </div>
             <p class="offer-name" style="margin-top:6px;">Abonnement complet 12 mois</p>
             <div class="pricing">
-              <span class="price-main">9,90€</span>
-              <span class="price-unit"> le 1er mois</span>
+              <span class="price-main">13€</span>
+              <span class="price-unit">/mois</span>
             </div>
-            <p class="price-then">puis <strong style="font-size:0.9375rem;font-weight:800;">26€/mois</strong> à partir du 2<sup>e</sup> mois</p>
+            <p class="price-then">au lieu de <strong style="font-size:0.9375rem;font-weight:800;text-decoration:line-through;">26€/mois</strong> &nbsp;·&nbsp; <strong>–50%</strong></p>
             <ul class="reassurance">
               <li>Le jeu Poppins sur tablette ou téléphone</li>
               <li>Suivi de l'avancée pour les parents</li>
@@ -355,8 +374,8 @@
             </ul>
             <p class="commitment">Engagement 12 mois, puis renouvellement automatique chaque mois. Résiliable à tout moment au moins 48h avant l'échéance.</p>
           </div>
-          <button class="cta-btn">Démarrer pour 9,90€</button>
-          <p class="footer-note">1er mois à 9,90€, puis 26€/mois.</p>
+          <button class="cta-btn">Démarrer pour 13€</button>
+          <p class="footer-note">13€/mois pendant 12 mois, puis 26€/mois.</p>
         </div>
       </div>
     </div>
@@ -420,10 +439,10 @@
             </div>
             <p class="offer-name" style="margin-top:6px;">Abonnement complet 6 mois</p>
             <div class="pricing">
-              <span class="price-main">9,90€</span>
-              <span class="price-unit"> le 1er mois</span>
+              <span class="price-main">15€</span>
+              <span class="price-unit">le 1er mois</span>
             </div>
-            <p class="price-then">puis <strong style="font-size:0.9375rem;font-weight:800;">26€/mois</strong> à partir du 2<sup>e</sup> mois</p>
+            <p class="price-then">puis <strong style="font-size:0.9375rem;font-weight:800;">30€/mois</strong> à partir du 2<sup>e</sup> mois</p>
             <ul class="reassurance">
               <li>Aucun paiement avant la fin des 7 jours</li>
               <li>Annulation facile en 2 clics durant l'essai</li>
@@ -456,10 +475,10 @@
             </div>
             <p class="offer-name" style="margin-top:6px;">Abonnement complet 6 mois</p>
             <div class="pricing">
-              <span class="price-main">9,90€</span>
-              <span class="price-unit"> le 1er mois</span>
+              <span class="price-main">15€</span>
+              <span class="price-unit">le 1er mois</span>
             </div>
-            <p class="price-then">puis <strong style="font-size:0.9375rem;font-weight:800;">26€/mois</strong> à partir du 2<sup>e</sup> mois</p>
+            <p class="price-then">puis <strong style="font-size:0.9375rem;font-weight:800;">30€/mois</strong> à partir du 2<sup>e</sup> mois</p>
             <ul class="reassurance">
               <li>Le jeu Poppins sur tablette ou téléphone</li>
               <li>Suivi de l'avancée pour les parents</li>
@@ -468,8 +487,8 @@
             </ul>
             <p class="commitment">Engagement 6 mois, puis renouvellement automatique chaque mois. Résiliable à tout moment au moins 48h avant l'échéance.</p>
           </div>
-          <button class="cta-btn">Démarrer pour 9,90€</button>
-          <p class="footer-note">1er mois à 9,90€, puis 26€/mois.</p>
+          <button class="cta-btn">Démarrer pour 15€</button>
+          <p class="footer-note">1er mois à 15€, puis 30€/mois.</p>
         </div>
       </div>
     </div>
@@ -480,11 +499,11 @@
   <div style="max-width:1080px;margin:48px auto 0;padding:20px;background:white;border-radius:12px;border:1px solid var(--light900);">
     <p style="font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#6b7c93;margin-bottom:10px;">Points de validation wording (produit + Alex + growth)</p>
     <ul style="font-size:0.8125rem;color:var(--ink500);line-height:1.7;padding-left:18px;">
-      <li><strong>Badge bras B :</strong> "Essai gratuit 7 jours" (V1, badge jaune) vs "–50% le premier mois" (V2, badge bleu) → voir landing-bras-b.html et landing-bras-b-v2.html</li>
+      <li><strong>Badge bras B :</strong> "Essai gratuit 7 jours" (V1, badge jaune) vs "–50% sur 12 mois" (V2, badge bleu) → voir landing-bras-b.html et landing-bras-b-v2.html</li>
       <li><strong>Badge bras C :</strong> "Prix découverte" vs "Offre de bienvenue" vs "Prix d'introduction" → à trancher</li>
-      <li><strong>CTA bras C :</strong> "Démarrer pour 9,90€" vs "Commencer maintenant" → à trancher</li>
-      <li><strong>Wording prix :</strong> "1er mois" vs "premier mois" (typographie à valider)</li>
-      <li><strong>Montant "puis 26€/mois" :</strong> confirmer que c'est 26€ pour les deux durées (6 et 12 mois)</li>
+      <li><strong>CTA bras C :</strong> "Démarrer pour 13€" (12m) / "Démarrer pour 15€" (6m) — wording à valider</li>
+      <li><strong>Prix 12 mois B/C :</strong> 13€/mois pendant toute la durée des 12 mois (–50% de 26€), puis 26€/mois au renouvellement</li>
+      <li><strong>Prix 6 mois B/C :</strong> 15€ le 1er mois (–50% de 30€), puis 30€/mois à partir du 2e mois</li>
     </ul>
   </div>
 
