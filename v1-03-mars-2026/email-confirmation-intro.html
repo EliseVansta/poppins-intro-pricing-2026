@@ -6,14 +6,9 @@
   <title>Mockup – Email confirmation commande – Intro Pricing</title>
   <style>
     :root {
-      --blue500:   #1F57A4;
-      --ink500:    #0F2E5A;
-      --mid300:    #9EB3D0;
-      --light300:  #F8F9FC;
-      --light900:  #D4DEED;
-      --green:     #4DCA95;
-      --warn300:   #FFD994;
-      --yellow900: #5F3901;
+      --blue500: #1F57A4; --ink500: #0F2E5A; --mid300: #9EB3D0;
+      --light300: #F8F9FC; --light900: #D4DEED; --green: #4DCA95;
+      --warn300: #FFD994; --yellow900: #5F3901;
       --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,14 +36,14 @@
     .recap-table td:last-child { color: var(--ink500); font-weight: 600; }
     .row-highlight td { background: #fffde7 !important; }
     .row-highlight td:first-child { color: #7c5300 !important; }
-    .row-highlight td:last-child  { color: var(--blue500) !important; }
+    .row-highlight td:last-child { color: var(--blue500) !important; }
     .cta-wrap { text-align: center; margin: 20px 0; }
     .cta-btn { display: inline-block; padding: 12px 28px; background: var(--blue500); color: white; font-size: 0.875rem; font-weight: 700; border-radius: 24px; text-decoration: none; }
     .tips-section { background: var(--light300); border-radius: 8px; padding: 16px; margin-top: 16px; }
     .tips-title { font-size: 0.8125rem; font-weight: 700; color: var(--ink500); margin-bottom: 10px; }
     .tips-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
     .tips-list li { font-size: 0.75rem; color: #555; line-height: 1.5; display: flex; align-items: flex-start; gap: 6px; }
-    .tips-list li::before { content: '→'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .tips-list li::before { content: 'a'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
     .email-footer { background: var(--light300); padding: 16px 20px; text-align: center; border-top: 1px solid var(--light900); }
     .email-footer p { font-size: 0.6875rem; color: var(--mid300); line-height: 1.6; }
     .email-footer a { color: var(--blue500); }
@@ -59,130 +54,82 @@
   </style>
 </head>
 <body>
-
   <p class="page-title">Mockup · Email confirmation de commande · Intro Pricing</p>
-  <p class="page-subtitle">Les lignes en jaune représentent les modifications vs l'email actuel (bras A)</p>
-
+  <p class="page-subtitle">Les lignes en jaune representent les modifications vs l'email actuel (bras A)</p>
   <div class="grid">
-
-    <!-- ════════════════════════ BRAS B ════════════════════════ -->
     <div>
       <span class="arm-label arm-b">Bras B — Essai 7 jours + Prix d'introduction</span>
-
       <div class="email-frame">
-        <div class="email-header">
-          <div class="email-logo">Popp<span>ins</span></div>
-          <p class="email-header-tagline">L'accompagnement de confiance</p>
-        </div>
-
+        <div class="email-header"><div class="email-logo">Popp<span>ins</span></div><p class="email-header-tagline">L'accompagnement de confiance</p></div>
         <div class="email-body">
-          <p class="email-greeting">Bienvenue, [Prénom] ! 🎉</p>
-          <p class="email-intro">Votre inscription est confirmée. Voici le récapitulatif de votre abonnement.</p>
-
-          <p class="section-title">Récapitulatif de votre abonnement</p>
-
-          <table class="recap-table">
-            <tbody>
-              <tr><td>Abonnement</td><td>Abonnement 12 mois</td></tr>
-              <tr><td>Date de souscription</td><td>[date]</td></tr>
-              <tr><td>Période d'essai</td><td>7 jours gratuits (jusqu'au [date+7j])</td></tr>
-              <tr class="row-highlight"><td>Tarif 1er mois ✦</td><td>9,90€ (à partir du [date+7j])</td></tr>
-              <tr class="row-highlight"><td>Tarif à partir du 2e mois ✦</td><td>26€/mois (à partir du [date+37j])</td></tr>
-              <tr><td>Engagement</td><td>12 mois, puis mensuel</td></tr>
-            </tbody>
-          </table>
-
-          <div class="delta">✦ Lignes modifiées vs email bras A : remplacent "Tarif après essai : 20,80€/mois à vie"</div>
-
-          <p style="font-size:0.9rem;font-weight:700;color:var(--ink500);margin-bottom:8px;">C'est parti pour l'aventure ! 🚀</p>
-          <p style="font-size:0.8rem;color:#555;line-height:1.6;margin-bottom:16px;">
-            Pendant votre essai, profitez de toutes les fonctionnalités sans aucune limite.
-            Vous recevrez un rappel 2 jours avant la fin de votre essai gratuit.
-          </p>
-
+          <p class="email-greeting">Bienvenue, [Prenom] !</p>
+          <p class="email-intro">Votre inscription est confirmee. Voici le recapitulatif de votre abonnement.</p>
+          <p class="section-title">Recapitulatif de votre abonnement</p>
+          <table class="recap-table"><tbody>
+            <tr><td>Abonnement</td><td>Abonnement 12 mois</td></tr>
+            <tr><td>Date de souscription</td><td>[date]</td></tr>
+            <tr><td>Periode d'essai</td><td>7 jours gratuits (jusqu'au [date+7j])</td></tr>
+            <tr class="row-highlight"><td>Tarif 1er mois</td><td>9,90EUR (a partir du [date+7j])</td></tr>
+            <tr class="row-highlight"><td>Tarif a partir du 2e mois</td><td>26EUR/mois (a partir du [date+37j])</td></tr>
+            <tr><td>Engagement</td><td>12 mois, puis mensuel</td></tr>
+          </tbody></table>
+          <div class="delta">Lignes modifiees vs email bras A : remplacent "Tarif apres essai : 20,80EUR/mois a vie"</div>
+          <p style="font-size:0.9rem;font-weight:700;color:var(--ink500);margin-bottom:8px;">C'est parti pour l'aventure !</p>
+          <p style="font-size:0.8rem;color:#555;line-height:1.6;margin-bottom:16px;">Pendant votre essai, profitez de toutes les fonctionnalites sans aucune limite. Vous recevrez un rappel 2 jours avant la fin de votre essai gratuit.</p>
           <div class="cta-wrap"><a href="#" class="cta-btn">Commencer une session</a></div>
-
           <div class="tips-section">
-            <p class="tips-title">Pour bien démarrer</p>
+            <p class="tips-title">Pour bien demarrer</p>
             <ul class="tips-list">
-              <li>Complétez le profil de votre enfant pour un accompagnement personnalisé</li>
-              <li>Explorez les séances recommandées par votre coach</li>
+              <li>Completez le profil de votre enfant pour un accompagnement personnalise</li>
+              <li>Explorez les seances recommandees par votre coach</li>
               <li>Activez les notifications pour ne pas manquer vos rappels</li>
             </ul>
           </div>
         </div>
-
-        <div class="email-footer">
-          <p>Vous avez reçu cet email car vous êtes abonné(e) à Poppins.<br/>
-          <a href="#">Se désabonner</a> · <a href="#">Politique de confidentialité</a></p>
-        </div>
+        <div class="email-footer"><p>Vous avez recu cet email car vous etes abonne(e) a Poppins.<br/><a href="#">Se desabonner</a> · <a href="#">Politique de confidentialite</a></p></div>
       </div>
     </div>
-
-    <!-- ════════════════════════ BRAS C ════════════════════════ -->
     <div>
       <span class="arm-label arm-c">Bras C — Prix d'introduction (sans essai)</span>
-
       <div class="email-frame">
-        <div class="email-header">
-          <div class="email-logo">Popp<span>ins</span></div>
-          <p class="email-header-tagline">L'accompagnement de confiance</p>
-        </div>
-
+        <div class="email-header"><div class="email-logo">Popp<span>ins</span></div><p class="email-header-tagline">L'accompagnement de confiance</p></div>
         <div class="email-body">
-          <p class="email-greeting">Bienvenue, [Prénom] ! 🎉</p>
-          <p class="email-intro">Votre inscription est confirmée. Voici le récapitulatif de votre abonnement.</p>
-
-          <p class="section-title">Récapitulatif de votre abonnement</p>
-
-          <table class="recap-table">
-            <tbody>
-              <tr><td>Abonnement</td><td>Abonnement 12 mois</td></tr>
-              <tr><td>Date de souscription</td><td>[date]</td></tr>
-              <tr class="row-highlight"><td>Tarif 1er mois ✦</td><td>9,90€ (dès aujourd'hui)</td></tr>
-              <tr class="row-highlight"><td>Tarif à partir du 2e mois ✦</td><td>26€/mois (à partir du [date+30j])</td></tr>
-              <tr><td>Engagement</td><td>12 mois, puis mensuel</td></tr>
-            </tbody>
-          </table>
-
-          <div class="delta">✦ Lignes modifiées vs email bras A : la ligne "Période d'essai" est supprimée. Deux lignes tarifaires remplacent "Tarif après essai".</div>
-
-          <p style="font-size:0.9rem;font-weight:700;color:var(--ink500);margin-bottom:8px;">C'est parti pour l'aventure ! 🚀</p>
-          <p style="font-size:0.8rem;color:#555;line-height:1.6;margin-bottom:16px;">
-            Votre accès est actif dès maintenant. Vous recevrez un rappel avant le renouvellement de votre abonnement à 26€/mois.
-          </p>
-
+          <p class="email-greeting">Bienvenue, [Prenom] !</p>
+          <p class="email-intro">Votre inscription est confirmee. Voici le recapitulatif de votre abonnement.</p>
+          <p class="section-title">Recapitulatif de votre abonnement</p>
+          <table class="recap-table"><tbody>
+            <tr><td>Abonnement</td><td>Abonnement 12 mois</td></tr>
+            <tr><td>Date de souscription</td><td>[date]</td></tr>
+            <tr class="row-highlight"><td>Tarif 1er mois</td><td>9,90EUR (des aujourd'hui)</td></tr>
+            <tr class="row-highlight"><td>Tarif a partir du 2e mois</td><td>26EUR/mois (a partir du [date+30j])</td></tr>
+            <tr><td>Engagement</td><td>12 mois, puis mensuel</td></tr>
+          </tbody></table>
+          <div class="delta">Lignes modifiees vs email bras A : la ligne "Periode d'essai" est supprimee. Deux lignes tarifaires remplacent "Tarif apres essai".</div>
+          <p style="font-size:0.9rem;font-weight:700;color:var(--ink500);margin-bottom:8px;">C'est parti pour l'aventure !</p>
+          <p style="font-size:0.8rem;color:#555;line-height:1.6;margin-bottom:16px;">Votre acces est actif des maintenant. Vous recevrez un rappel avant le renouvellement de votre abonnement a 26EUR/mois.</p>
           <div class="cta-wrap"><a href="#" class="cta-btn">Commencer une session</a></div>
-
           <div class="tips-section">
-            <p class="tips-title">Pour bien démarrer</p>
+            <p class="tips-title">Pour bien demarrer</p>
             <ul class="tips-list">
-              <li>Complétez le profil de votre enfant pour un accompagnement personnalisé</li>
-              <li>Explorez les séances recommandées par votre coach</li>
+              <li>Completez le profil de votre enfant pour un accompagnement personnalise</li>
+              <li>Explorez les seances recommandees par votre coach</li>
               <li>Activez les notifications pour ne pas manquer vos rappels</li>
             </ul>
           </div>
         </div>
-
-        <div class="email-footer">
-          <p>Vous avez reçu cet email car vous êtes abonné(e) à Poppins.<br/>
-          <a href="#">Se désabonner</a> · <a href="#">Politique de confidentialité</a></p>
-        </div>
+        <div class="email-footer"><p>Vous avez recu cet email car vous etes abonne(e) a Poppins.<br/><a href="#">Se desabonner</a> · <a href="#">Politique de confidentialite</a></p></div>
       </div>
     </div>
-
-  </div><!-- /.grid -->
-
+  </div>
   <div class="notes-block">
     <p class="notes-title">Points de validation Hugo (Customer.io) + Produit + Growth</p>
     <ul>
-      <li><strong>Wording "1er mois" / "2e mois" :</strong> À aligner avec le wording page de paiement et landing → validation produit + Alex</li>
-      <li><strong>Bras B — texte d'accroche :</strong> Préciser que le rappel de fin d'essai est envoyé (ID 30 Customer.io existant) et qu'un <em>nouveau</em> rappel M2 sera envoyé avant le renouvellement à 26€</li>
-      <li><strong>Bras C — ligne "Période d'essai" :</strong> À supprimer (pas de trial) ; vérifier que Hugo a le bon conditionnel dans le template</li>
-      <li><strong>Dates dynamiques :</strong> Calculer [date+7j], [date+37j], [date+30j] côté Customer.io via les attributs Stripe → à vérifier avec Hugo</li>
-      <li><strong>Objet de l'email :</strong> À définir — ex. "Bienvenue chez Poppins — votre offre découverte est active" vs "Bienvenue chez Poppins — votre essai démarre aujourd'hui"</li>
+      <li><strong>Wording "1er mois" / "2e mois" :</strong> A aligner avec le wording page de paiement et landing</li>
+      <li><strong>Bras B — texte d'accroche :</strong> Rappel de fin d'essai (ID 30 Customer.io existant) + nouveau rappel M2</li>
+      <li><strong>Bras C — ligne "Periode d'essai" :</strong> A supprimer (pas de trial)</li>
+      <li><strong>Dates dynamiques :</strong> [date+7j], [date+37j], [date+30j] via attributs Stripe Customer.io</li>
+      <li><strong>Objet de l'email :</strong> A definir avec growth</li>
     </ul>
   </div>
-
 </body>
 </html>
