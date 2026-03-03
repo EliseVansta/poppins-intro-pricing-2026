@@ -75,15 +75,10 @@
     .t2::before { border-left: 16px solid transparent; border-right: 16px solid transparent; border-bottom: 28px solid #2A8A35; left: calc(50% - 16px); transform: none; }
     .t3 { bottom: 44px; left: 60px; }
     .t3::before { border-left: 14px solid transparent; border-right: 14px solid transparent; border-bottom: 24px solid #3DA040; left: calc(50% - 14px); transform: none; }
-    .gs1-char {
-      position: absolute; bottom: 63px; left: 50%; transform: translateX(-50%);
-    }
+    .gs1-char { position: absolute; bottom: 63px; left: 50%; transform: translateX(-50%); }
     .gs1-char-head { width: 18px; height: 18px; background: #EDAC6E; border-radius: 50%; margin: 0 auto; }
     .gs1-char-body { width: 14px; height: 18px; background: #C03030; border-radius: 3px; margin: 0 auto; }
-    .gs1-hud {
-      position: absolute; top: 8px; left: 8px; right: 8px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
+    .gs1-hud { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; align-items: center; justify-content: space-between; }
     .gs1-badge { background: rgba(0,0,0,0.45); color: white; font-size: 7px; font-weight: 700; padding: 3px 8px; border-radius: 8px; }
     .gs1-hearts { display: flex; gap: 2px; }
     .heart { width: 9px; height: 8px; background: #E83A3A; clip-path: polygon(50% 100%, 0% 30%, 15% 0%, 50% 20%, 85% 0%, 100% 30%); }
@@ -92,10 +87,7 @@
 
     /* Game screen 2 — exercise */
     .gs2 { width: 100%; height: 100%; display: flex; flex-direction: column; }
-    .gs2-header {
-      background: #1F57A4; padding: 9px 10px;
-      display: flex; align-items: center; gap: 6px; flex-shrink: 0;
-    }
+    .gs2-header { background: #1F57A4; padding: 9px 10px; display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
     .gs2-lv { font-size: 8px; font-weight: 700; color: white; white-space: nowrap; }
     .gs2-prog { flex: 1; height: 5px; background: rgba(255,255,255,0.25); border-radius: 3px; }
     .gs2-progfill { width: 42%; height: 100%; background: white; border-radius: 3px; }
@@ -111,9 +103,7 @@
     .gs2-choice { flex: 1; height: 36px; background: #E2EAF8; border-radius: 7px; border: 1px solid #D4DEED; }
 
     /* Left footer logo */
-    .left-footer {
-      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 1;
-    }
+    .left-footer { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 1; }
     .left-logo { font-size: 1.125rem; font-weight: 800; color: white; letter-spacing: -.02em; }
     .left-logo em { font-style: normal; color: var(--yellow); }
 
@@ -144,8 +134,6 @@
     .offer-amount-block { text-align: right; }
     .offer-price { font-size: 1.5rem; font-weight: 700; color: var(--blue); white-space: nowrap; }
     .offer-price-old { font-size: 0.875rem; font-weight: 400; text-decoration: line-through; color: var(--mid); margin-right: 4px; }
-    .offer-sub { font-size: 0.8125rem; color: var(--mid-text); margin-top: 4px; }
-    .offer-sub strong { color: var(--blue); }
     .offer-commitment { font-size: 0.75rem; color: var(--mid-text); line-height: 1.5; margin-top: 10px; }
     .modify-btn {
       display: block; width: 100%; text-align: center;
@@ -247,8 +235,6 @@
   <!-- ── Left column ── -->
   <div class="left-col">
     <div class="phones-scene">
-
-      <!-- Phone left (back) -->
       <div class="phone-device phone-device--left">
         <div class="gs1">
           <div class="gs1-sky"></div>
@@ -267,8 +253,6 @@
           <div class="gs1-pbar"><div class="gs1-pfill"></div></div>
         </div>
       </div>
-
-      <!-- Phone right (front) -->
       <div class="phone-device phone-device--right">
         <div class="gs2">
           <div class="gs2-header">
@@ -294,7 +278,6 @@
           </div>
         </div>
       </div>
-
     </div>
     <div class="left-footer">
       <div class="left-logo">Popp<em>ins</em></div>
@@ -306,7 +289,6 @@
     <div class="right-content">
 
       <div class="right-logo">Popp<em>ins</em></div>
-
       <h1>Commencez votre essai gratuit</h1>
 
       <!-- Offer card -->
@@ -318,11 +300,11 @@
             <div class="offer-price">
               <strong>20,80€</strong><span style="font-size:0.875rem;font-weight:400">/mois</span> <span class="offer-price-old">26€</span>
             </div>
-            <div class="offer-sub"><strong>–20% appliquée</strong></div>
           </div>
         </div>
         <p class="offer-commitment">Engagement de 12 mois, puis renouvellement automatique chaque mois. Résiliable à tout moment au moins 48h avant l'échéance de votre abonnement.</p>
       </div>
+
       <!-- Timeline (3 étapes) -->
       <div class="timeline">
         <div class="tl-row">
