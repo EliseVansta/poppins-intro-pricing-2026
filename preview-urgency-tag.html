@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview – Urgency tag</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #eef2f9; padding: 40px 24px; color: #0F2E5A; }
+    h2 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #6b7c93; margin-bottom: 16px; }
+    .row { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 48px; align-items: flex-start; }
+    .col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .label { font-size: 0.6875rem; color: #9EB3D0; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+
+    /* Carte offre (contexte réel) */
+    .mock-card {
+      background: white; border: 1.5px solid #E2EAF8; border-radius: 20px;
+      padding: 20px 20px; position: relative; width: 280px;
+      box-shadow: 0 8px 24px rgba(15,46,90,.10);
+    }
+    .mock-badge {
+      position: absolute; top: -1px; right: -1px;
+      padding: 6px 14px; font-size: 0.75rem; font-weight: 700;
+      border-radius: 0 20px 0 14px;
+      background: #FFD994; color: #5F3901;
+    }
+    .mock-title { font-size: 0.9375rem; font-weight: 700; margin-top: 24px; margin-bottom: 8px; }
+    .mock-price { font-size: 1.5rem; font-weight: 800; color: #1F57A4; }
+    .mock-sub { font-size: 0.75rem; color: #9EB3D0; margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <h2>Comparaison styles — Urgency tag</h2>
+
+  <div class="row">
+
+    <div class="col">
+      <span class="label">Actuel</span>
+      <!-- Tag actuel -->
+      <span style="display:inline-block;padding:4px 12px;font-size:0.75rem;font-weight:700;background:#FEF3E2;color:#B45309;border:1px solid #FCD6A0;border-radius:100px;">
+        ⏳ Offre limitée · 1 semaine restante
+      </span>
+      <!-- Dans le contexte d'une carte -->
+      <div style="margin-top:8px; text-align:center;">
+        <span style="display:inline-block;padding:4px 12px;font-size:0.75rem;font-weight:700;background:#FEF3E2;color:#B45309;border:1px solid #FCD6A0;border-radius:100px;">
+          ⏳ Offre limitée · 1 semaine restante
+        </span>
+        <div class="mock-card">
+          <span class="mock-badge">Essai gratuit 7j</span>
+          <p class="mock-title">Abonnement complet – 12 mois</p>
+          <span class="mock-price">13€</span>
+          <p class="mock-sub">le 1er mois · puis 26€/mois</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <span class="label">Proposition (moins voyant)</span>
+      <!-- Tag proposé -->
+      <span style="display:inline-block;padding:4px 12px;font-size:0.75rem;font-weight:500;background:#F1F3F6;color:#6B7C93;border:1px solid #D4DEED;border-radius:100px;">
+        ⏳ Offre limitée · 1 semaine restante
+      </span>
+      <!-- Dans le contexte d'une carte -->
+      <div style="margin-top:8px; text-align:center;">
+        <span style="display:inline-block;padding:4px 12px;font-size:0.75rem;font-weight:500;background:#F1F3F6;color:#6B7C93;border:1px solid #D4DEED;border-radius:100px;">
+          ⏳ Offre limitée · 1 semaine restante
+        </span>
+        <div class="mock-card">
+          <span class="mock-badge">Essai gratuit 7j</span>
+          <p class="mock-title">Abonnement complet – 12 mois</p>
+          <span class="mock-price">13€</span>
+          <p class="mock-sub">le 1er mois · puis 26€/mois</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <span class="label">Option intermédiaire (ambre adouci)</span>
+      <!-- Tag intermédiaire -->
+      <span style="display:inline-block;padding:4px 12px;font-size:0.75rem;font-weight:500;background:#FEF9EE;color:#A06820;border:1px solid #F0D9A0;border-radius:100px;">
+        ⏳ Offre limitée · 1 semaine restante
+      </span>
+      <!-- Dans le contexte d'une carte -->
+      <div style="margin-top:8px; text-align:center;">
+        <span style="display:inline-block;padding:4px 12px;font-size:0.75rem;font-weight:500;background:#FEF9EE;color:#A06820;border:1px solid #F0D9A0;border-radius:100px;">
+          ⏳ Offre limitée · 1 semaine restante
+        </span>
+        <div class="mock-card">
+          <span class="mock-badge">Essai gratuit 7j</span>
+          <p class="mock-title">Abonnement complet – 12 mois</p>
+          <span class="mock-price">13€</span>
+          <p class="mock-sub">le 1er mois · puis 26€/mois</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
