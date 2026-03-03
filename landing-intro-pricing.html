@@ -86,7 +86,6 @@
       border-radius: 0 24px 0 16px;
     }
     .badge-trial   { background: var(--warn300); color: var(--yellow900); }
-    .badge-intro   { background: #e0f7ec; color: #1a7a4a; }
     .badge-discount { background: var(--blue500); color: white; }
 
     .pricing {
@@ -161,7 +160,7 @@
 <body>
 
   <p class="page-title">Mockup · Landing post-éligibilité · Intro Pricing</p>
-  <p class="page-subtitle">Bras A (essai 7j, –20%, 20,80€/mois) · Bras B (essai 7j + tag promo, –50%) · Bras C (–50% sans essai) — design unifié</p>
+  <p class="page-subtitle">Bras A (essai 7j, –20%, 20,80€/mois) · Bras B (essai 7j + tag promo, –50%) · Bras C (–50% sans essai, sans badge) — design unifié</p>
 
   <div class="grid">
 
@@ -233,7 +232,7 @@
 
     <!-- ════════════════════════ BRAS C 12 mois ════════════════════════ -->
     <div>
-      <span class="arm-label arm-c">Bras C — Prix découverte (sans essai)</span>
+      <span class="arm-label arm-c">Bras C — Sans essai, sans badge</span>
       <div class="phone">
         <div class="app-header"><div class="app-logo">Popp<span>ins</span></div></div>
         <div class="app-content">
@@ -245,8 +244,7 @@
             <span style="display:inline-block;padding:3px 9px;font-size:0.6875rem;font-weight:700;background:#FEF3E2;color:#B45309;border:1px solid #FCD6A0;border-radius:100px;">⏳ Offre limitée · 1 semaine restante</span>
           </div>
           <div class="offer-card">
-            <span class="badge badge-intro">Prix découverte</span>
-            <p class="offer-name">Abonnement complet 12 mois</p>
+            <p class="offer-name" style="margin-top:0;">Abonnement complet 12 mois</p>
             <div class="pricing">
               <span class="price-main">13€</span>
               <span class="price-unit">le 1er mois</span>
@@ -341,7 +339,7 @@
 
     <!-- ════════════════════════ BRAS C 6 mois ════════════════════════ -->
     <div>
-      <span class="arm-label arm-c">Bras C — 6 mois</span>
+      <span class="arm-label arm-c">Bras C — 6 mois, sans badge</span>
       <div class="phone">
         <div class="app-header"><div class="app-logo">Popp<span>ins</span></div></div>
         <div class="app-content">
@@ -353,8 +351,7 @@
             <span style="display:inline-block;padding:3px 9px;font-size:0.6875rem;font-weight:700;background:#FEF3E2;color:#B45309;border:1px solid #FCD6A0;border-radius:100px;">⏳ Offre limitée · 1 semaine restante</span>
           </div>
           <div class="offer-card">
-            <span class="badge badge-intro">Prix découverte</span>
-            <p class="offer-name">Abonnement complet 6 mois</p>
+            <p class="offer-name" style="margin-top:0;">Abonnement complet 6 mois</p>
             <div class="pricing">
               <span class="price-main">15€</span>
               <span class="price-unit">le 1er mois</span>
@@ -382,14 +379,13 @@
     <p style="font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#6b7c93;margin-bottom:10px;">Points de validation wording (produit + Alex + growth)</p>
     <ul style="font-size:0.8125rem;color:var(--ink500);line-height:1.7;padding-left:18px;">
       <li><strong>Badge bras B :</strong> "Essai gratuit 7 jours" (V1, badge jaune) vs "–50% sur 12 mois" (V2, badge bleu) → voir landing-bras-b.html et landing-bras-b-v2.html</li>
-      <li><strong>Badge bras C :</strong> "Prix découverte" vs "Offre de bienvenue" vs "Prix d'introduction" → à trancher</li>
+      <li><strong>Badge bras C :</strong> supprimé — aucun badge affiché</li>
       <li><strong>CTA bras C :</strong> "Démarrer pour 13€" (12m) / "Démarrer pour 15€" (6m) — wording à valider</li>
       <li><strong>Prix 12 mois bras A :</strong> 20,80€/mois (–20%), au lieu de 26€/mois · essai 7j</li>
       <li><strong>Prix 12 mois bras B :</strong> 13€ le 1er mois (–50%), puis 26€/mois à partir du 2e mois</li>
       <li><strong>Prix 12 mois bras C :</strong> 13€ le 1er mois (–50%), puis 30€/mois à partir du 2e mois</li>
       <li><strong>Prix 6 mois bras A :</strong> 24€/mois (–20%), au lieu de 30€/mois · essai 7j</li>
       <li><strong>Prix 6 mois bras B+C :</strong> 15€ le 1er mois (–50%), puis 30€/mois à partir du 2e mois</li>
-      <li><strong>Différence A/B/C :</strong> badge, tag urgence, liste d'arguments ET prix</li>
     </ul>
   </div>
 
