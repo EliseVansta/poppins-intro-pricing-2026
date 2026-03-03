@@ -12,8 +12,6 @@
       --navy:        #0F2E5A;
       --blue:        #1F57A4;
       --green:       #4DCA95;
-      --green-dark:  #1A7A4A;
-      --green-bg:    #E0F7EC;
       --light:       #F8F9FC;
       --border:      #D4DEED;
       --mid:         #9EB3D0;
@@ -135,25 +133,13 @@
       box-shadow: 0 2px 2px rgba(18,52,100,.02), 0 6px 16px rgba(25,74,144,.08);
       margin-bottom: 8px;
     }
-    .intro-tag {
-      position: absolute; right: -1px; top: -1px;
-      padding: 4px 14px; font-size: 0.8125rem; font-weight: 600;
-      border-radius: 0 8px 0 8px;
-      background: var(--green-bg); color: var(--green-dark);
-    }
-    .offer-body { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 22px; }
+    .offer-body { display: flex; justify-content: space-between; align-items: flex-start; }
     .offer-name { font-size: 1rem; font-weight: 600; color: var(--navy); }
     .offer-amount-block { text-align: right; }
     .offer-price { font-size: 1.5rem; font-weight: 700; color: var(--blue); white-space: nowrap; }
     .offer-sub { font-size: 0.8125rem; color: var(--mid-text); margin-top: 4px; }
     .offer-sub strong { color: var(--blue); }
     .offer-commitment { font-size: 0.75rem; color: var(--mid-text); line-height: 1.5; margin-top: 10px; }
-    .modify-btn {
-      display: block; width: 100%; text-align: center;
-      color: var(--blue); font-size: 0.8125rem; text-decoration: underline;
-      background: none; border: none; cursor: pointer;
-      padding: 8px 0 12px; font-family: inherit;
-    }
 
     /* ── Timeline ── */
     .timeline { background: var(--light); border-radius: 12px; padding: 20px 16px; margin-bottom: 24px; }
@@ -312,7 +298,6 @@
 
       <!-- Offer card -->
       <div class="offer-card">
-        <span class="intro-tag">Prix découverte</span>
         <div class="offer-body">
           <div class="offer-name">12 mois</div>
           <div class="offer-amount-block">
