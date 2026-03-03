@@ -61,6 +61,12 @@
     .price-unit { font-size: 0.875rem; color: var(--mid); }
     .price-then { font-size: 0.875rem; color: var(--mid); margin-bottom: 22px; }
     .price-then strong { color: var(--blue); }
+    .discount-pill {
+      display: inline-flex; align-items: center; align-self: center;
+      background: #FEE2E2; color: #DC2626;
+      font-size: 0.75rem; font-weight: 800;
+      padding: 4px 10px; border-radius: 100px; white-space: nowrap;
+    }
     .features-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
     .features-list li { font-size: 0.9375rem; display: flex; align-items: center; gap: 12px; }
     .check {
@@ -124,9 +130,10 @@
         <p class="offer-title">Abonnement complet 12 mois</p>
         <div class="pricing">
           <span class="price-main">13€</span>
-          <span class="price-unit">/mois</span>
+          <span class="price-unit">le 1er mois</span>
+          <span class="discount-pill">–50%</span>
         </div>
-        <p class="price-then">au lieu de <strong style="color:var(--blue);font-size:1.125rem;font-weight:800;text-decoration:line-through;">26€/mois</strong> &nbsp;·&nbsp; <strong>–50%</strong></p>
+        <p class="price-then">puis <strong style="color:var(--blue);font-size:1.125rem;font-weight:800;">30€/mois</strong> à partir du 2<sup>e</sup> mois</p>
         <ul class="features-list">
           <li><span class="check">✓</span>Le jeu Poppins sur tablette ou téléphone</li>
           <li><span class="check">✓</span>Suivi de l'avancée pour les parents</li>
@@ -135,7 +142,7 @@
         </ul>
         <p class="commitment-text">Engagement 12 mois, puis renouvellement automatique chaque mois. Résiliable au moins 48h avant l'échéance.</p>
         <button class="offer-cta">Démarrer pour 13€</button>
-        <p class="offer-footnote">13€/mois pendant 12 mois, puis 26€/mois.</p>
+        <p class="offer-footnote">13€ le 1er mois, puis 30€/mois.</p>
       </div>
     </div>
   </section>
@@ -146,7 +153,7 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary class="faq-question">Comment fonctionne le prix découverte ?<span class="faq-toggle">+</span></summary>
-          <p class="faq-answer">Votre abonnement est facturé 13€/mois dès l'inscription, pendant 12 mois — soit –50% du prix habituel de 26€/mois. À partir du 13e mois, l'abonnement passe à 26€/mois. Vous recevrez un email de rappel avant chaque renouvellement.</p>
+          <p class="faq-answer">Votre abonnement est facturé 13€ dès l'inscription pour le 1er mois (–50%), puis 30€/mois à partir du 2e mois. Vous recevrez un email de rappel avant chaque renouvellement.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-question">À partir de quel âge Poppins est-il adapté ?<span class="faq-toggle">+</span></summary>
