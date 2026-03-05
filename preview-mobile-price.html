@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview — Bloc prix mobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0F2E5A;
+      --blue: #1F57A4;
+      --mid-text: #7A96B5;
+      --border: #D4DEED;
+      --yellow: #FFD994;
+      --yellow-dark: #5F3901;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F0F4FA;
+      padding: 32px 16px;
+      color: var(--navy);
+    }
+    h2 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--mid-text);
+      margin-bottom: 12px;
+    }
+    .scenario { margin-bottom: 40px; }
+    /* Mobile frame */
+    .mobile-frame {
+      width: 375px;
+      max-width: 100%;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 4px 24px rgba(15,46,90,.12);
+    }
+    /* Offer card */
+    .offer-card {
+      border: 1px solid #E2EAF8;
+      border-radius: 8px;
+      padding: 16px;
+      position: relative;
+      box-shadow: 0 2px 2px rgba(18,52,100,.02), 0 6px 16px rgba(25,74,144,.08);
+    }
+    .trial-tag {
+      position: absolute; right: -1px; top: -1px;
+      padding: 4px 14px;
+      font-size: 0.8125rem; font-weight: 600;
+      border-radius: 0 8px 0 8px;
+      background: var(--yellow); color: var(--yellow-dark);
+    }
+    /* AVANT */
+    .offer-body--before {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 22px;
+    }
+    /* APRÈS */
+    .offer-body--after {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 22px;
+    }
+    .offer-name {
+      font-size: 1rem; font-weight: 600; color: var(--navy);
+    }
+    .offer-amount-block--before { text-align: right; }
+    .offer-amount-block--after { text-align: left; }
+    .offer-price {
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--blue); white-space: nowrap;
+    }
+    .offer-price span { font-size: 0.875rem; font-weight: 400; }
+    .offer-sub {
+      font-size: 0.8125rem; color: var(--mid-text); margin-top: 2px;
+    }
+    .offer-sub strong { color: var(--blue); }
+    .offer-commitment {
+      font-size: 0.75rem; color: var(--mid-text);
+      line-height: 1.5; margin-top: 10px;
+    }
+    /* Labels */
+    .label-before { color: #C0392B; }
+    .label-after  { color: #27AE60; }
+    .tag {
+      display: inline-block;
+      font-size: 0.6875rem; font-weight: 700;
+      padding: 2px 10px; border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    .tag--before { background: #FDECEA; color: #C0392B; }
+    .tag--after  { background: #EAFAF1; color: #27AE60; }
+  </style>
+</head>
+<body>
+
+  <div class="scenario">
+    <div class="mobile-frame">
+      <div class="tag tag--before">Avant</div>
+      <div class="offer-card">
+        <span class="trial-tag">Essai gratuit 7 jours</span>
+        <div class="offer-body--before">
+          <div class="offer-name">12 mois</div>
+          <div class="offer-amount-block--before">
+            <div class="offer-price"><strong>13€</strong><span> le 1er mois</span></div>
+            <div class="offer-sub">puis <strong>26€/mois</strong> à partir du 2e mois</div>
+          </div>
+        </div>
+        <p class="offer-commitment">Engagement de 12 mois, puis renouvellement automatique chaque mois. Résiliable au moins 48h avant l'échéance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="mobile-frame">
+      <div class="tag tag--after">Après</div>
+      <div class="offer-card">
+        <span class="trial-tag">Essai gratuit 7 jours</span>
+        <div class="offer-body--after">
+          <div class="offer-name">12 mois</div>
+          <div class="offer-amount-block--after">
+            <div class="offer-price"><strong>13€</strong><span> le 1er mois</span></div>
+            <div class="offer-sub">puis <strong>26€/mois</strong> à partir du 2e mois</div>
+          </div>
+        </div>
+        <p class="offer-commitment">Engagement de 12 mois, puis renouvellement automatique chaque mois. Résiliable au moins 48h avant l'échéance.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
